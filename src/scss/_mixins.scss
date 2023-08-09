@@ -1,0 +1,10 @@
+@mixin flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin bold-fonts {
+  font-size: 24px;
+  font-weight: 700;
+}

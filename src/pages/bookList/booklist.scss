@@ -1,0 +1,63 @@
+.findBooks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin: 50px 0;
+  @media screen and (max-width: 630px) {
+    flex-direction: column;
+    .filter-container {
+      margin-top: 20px;
+    }
+  }
+}
+
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: 939px) {
+    justify-content: space-evenly;
+  }
+  .mainBook {
+    padding: 10px;
+    &:hover {
+      box-shadow: 0px 0px 10px rgb(30, 93, 94);
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+  div {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img {
+      max-width: 250px;
+      @media screen and (max-width: 768px) {
+        max-width: 224px;
+      }
+    }
+    .button {
+      margin-right: auto;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      &-link {
+        text-decoration: none;
+        color: black;
+        padding: 10px 20px;
+        display: block;
+        @media screen and (max-width: 768px) {
+          padding: 5px 10px;
+        }
+      }
+      &:hover {
+        .button-link {
+          color: rgb(120, 43, 43);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../../scss/style.scss";
+
+// form user
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  button {
+    width: 100%;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .form-avatar {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 30px;
+    @media screen and (max-width: 320px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .form-uname {
+    @include bold-fonts();
+    margin-bottom: 10px;
+    @media screen and (max-width: 320px) {
+      font-size: 22px;
+    }
+  }
+  .form-input {
+    width: 200px;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    &:focus {
+      outline: none;
+      border-color: #97aab8;
+      box-shadow: 0 0 8px rgba(77, 90, 105, 0.5);
+    }
+    @media screen and (max-width: 320px) {
+      width: 200px;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    transform: translateY(-30%);
+  }
+}
+
+.btnSignin {
+  padding: 10px 20px;
+  &.disabled {
+    background-color: initial;
+  }
+}

@@ -1,0 +1,99 @@
+@import "../scss/style.scss";
+
+.nav {
+  background-color: #e3e9f1;
+  &-store {
+    // border: 1px solid #000;
+    padding: 24px 10px;
+    &.books {
+      padding: 10px;
+      min-height: 80px;
+    }
+  }
+}
+
+.full-name {
+  font-size: 24px;
+  span {
+    text-transform: uppercase;
+    font-weight: 700;
+    a {
+      text-decoration: none;
+      color: black;
+      line-height: 24px;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: salmon;
+      }
+    }
+  }
+  @media screen and (max-width: 940px) {
+    font-size: 18px;
+    @media screen and (max-width: 320px) {
+      font-size: 16px;
+    }
+  }
+}
+
+//books header
+
+.books {
+  @include flex-container();
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+.books-specific {
+  @include flex-container();
+  @media screen and (max-width: 768px) {
+    margin-top: 10px;
+  }
+  .username-text {
+    font-size: 22px;
+    @media screen and (max-width: 940px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.books-cart {
+  @extend .width-container;
+  transition: transform 0.3s ease-in-out;
+  @media screen and (max-width: 768px) {
+    width: 40px;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.username-avatar {
+  @extend .width-container;
+  @media screen and (max-width: 768px) {
+    width: 40px;
+  }
+}
+
+.books-user {
+  @include flex-container();
+}
+
+.username,
+.username-text,
+.sign-out {
+  margin-left: 10px;
+}
+
+//button nav
+
+.button {
+  .link {
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    color: black;
+    @media screen and (max-width: 768px) {
+      padding: 5px 10px;
+    }
+  }
+}
